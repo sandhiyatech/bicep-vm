@@ -43,12 +43,19 @@ resource vnet 'Microsoft.Network/virtualNetworks@2020-11-01' = {
   }
 }
 
-resource publicIP 'Microsoft.Network/publicIPAddresses@2020-11-01' = {
+resource publicIPAddress 'Microsoft.Network/publicIPAddresses@2020-11-01' = {
   name: '${vmName}-pip'
   location: location
+  sku: {
+    name: 'Basic'
+  }
   properties: {
     publicIPAllocationMethod: 'Dynamic'
     publicIPAddressVersion: 'IPv4'
+    dnsSettings: {
+      domainNameLabel: dnsLabelPrefix
+    }
+    idleTimeoutInMinutes: 4
   }
 }
 
