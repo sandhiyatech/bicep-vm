@@ -69,7 +69,7 @@ resource nic 'Microsoft.Network/networkInterfaces@2020-11-01' = {
           }
           privateIPAllocationMethod: 'Dynamic'
           publicIPAddress: {
-            id: publicIP.id
+            id: publicIPAddress.id
           }
         }
       }
@@ -110,4 +110,4 @@ resource vm 'Microsoft.Compute/virtualMachines@2020-12-01' = {
   }
 }
 output vmId string = vm.id
-output publicIPAddress string = publicIP.properties.ipAddress
+output publicIPAddress string = publicIPAddress.properties.ipAddress
