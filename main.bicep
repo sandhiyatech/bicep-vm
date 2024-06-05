@@ -52,9 +52,6 @@ resource publicIPAddress 'Microsoft.Network/publicIPAddresses@2020-11-01' = {
   properties: {
     publicIPAllocationMethod: 'Dynamic'
     publicIPAddressVersion: 'IPv4'
-    dnsSettings: {
-      domainNameLabel: dnsLabelPrefix
-    }
     idleTimeoutInMinutes: 4
   }
 }
