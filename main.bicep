@@ -48,6 +48,7 @@ resource publicIP 'Microsoft.Network/publicIPAddresses@2020-11-01' = {
   location: location
   properties: {
     publicIPAllocationMethod: 'Dynamic'
+    publicIPAddressVersion: 'IPv4'
   }
 }
 
