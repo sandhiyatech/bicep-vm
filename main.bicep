@@ -1,3 +1,4 @@
+targetScope = 'resourceGroup'
 @description('The name of the Virtual Machine')
 param vmName string
 
@@ -19,6 +20,8 @@ param vnetAddressPrefix string = '10.0.0.0/16'
 
 @description('The address prefix for the Subnet')
 param subnetAddressPrefix string = '10.0.0.0/24'
+
+param resourceGroupName string = 'BH-Team'
 
 resource vnet 'Microsoft.Network/virtualNetworks@2020-11-01' = {
   name: '${vmName}-vnet'
