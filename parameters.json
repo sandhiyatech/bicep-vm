@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "vmName": {
-      "value": "san-bicep-vm"
+      "value": "san-bicep-vm-test"
     },
     "adminUsername": {
       "value": "azureuser"
