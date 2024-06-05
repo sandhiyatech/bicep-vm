@@ -20,5 +20,5 @@ jobs:
       run: |
         az deployment group create \
           --resource-group 'BH-Team' \
-          --template-file bicep-vm/main.bicep \
-          --parameters bicep/parameters.json
+          --template-file main.bicep \
+          --parameters parameters.json
