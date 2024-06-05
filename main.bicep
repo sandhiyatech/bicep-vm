@@ -104,6 +104,3 @@ resource vm 'Microsoft.Compute/virtualMachines@2020-12-01' = {
     }
   }
 }
-
-output vmId string = vm.id
-output publicIPAddress string = publicIP.properties.ipAddress
